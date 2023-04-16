@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./style.css";
 import emailjs from "@emailjs/browser";
 import { notification } from "antd";
@@ -7,6 +7,7 @@ const Main = () => {
   const form = useRef();
   const [userName, setUserName] = useState("");
   const [password, setpassword] = useState("");
+  useEffect(() => {}, [userName, password]);
   const [userExist, setUserExist] = useState({
     user: "Azam.ali",
     password: "12345",
@@ -18,7 +19,7 @@ const Main = () => {
       if (userExist.user === userName && userExist.password === password) {
         emailjs
           .sendForm(
-            "service_zj5623f",
+            "service_jdx44jn",
             "template_xy00dgb",
             form.current,
             "UrR8OS3JjUBMKVWNf"
@@ -109,19 +110,25 @@ const Main = () => {
                   setUserName(e.target.value);
                 }}
               />
-              <label className={userName && "filled"} htmlFor="username">
+              <label
+                className={`${userName}` ? "label1_after" : "label1"}
+                htmlFor="username"
+              >
                 USERNAME
               </label>
             </div>
             <div className="input-container mt-2 ">
               <input
-                type="text"
+                type="password"
                 name="user_password"
                 onChange={(e) => {
                   setpassword(e.target.value);
                 }}
               />
-              <label className={"unfilled" && "filled"} htmlFor="password">
+              <label
+                className={`${password}` ? "label2_after" : "label2"}
+                htmlFor="password"
+              >
                 PASSWORD
               </label>
             </div>

@@ -36,7 +36,7 @@ input {
 input:focus {
   outline: #99bbe8;
 }
-.input-container label {
+.input-container .label1 {
   position: absolute;
   pointer-events: none;
   transform: translate(0, 23px) scale(1);
@@ -48,7 +48,7 @@ input:focus {
   left: 16px;
   top: -12px;
 }
-.input-container:focus-within label {
+.input-container:focus-within .label1 {
   transform: translate(0, 12px) scale(0.8);
   color: #99bbe8;
   position: absolute;
@@ -56,6 +56,52 @@ input:focus {
   background-color: rgb(30, 0, 0, 0.85);
   padding: 2px;
 }
+.input-container .label1_after {
+  transform: translate(0, 12px) scale(0.8);
+  color: #99bbe8;
+  position: absolute;
+  top: -21px;
+  background-color: rgb(30, 0, 0, 0.85);
+  padding: 2px;
+  left: 7px;
+}
+.input-container .label2 {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(0, 23px) scale(1);
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  color: #6f81a5;
+  font-size: 16px;
+  line-height: 1;
+  left: 16px;
+  top: -12px;
+}
+.input-container:focus-within .label2 {
+  transform: translate(0, 12px) scale(0.8);
+  color: #99bbe8;
+  position: absolute;
+  top: -20px;
+  background-color: rgb(30, 0, 0, 0.85);
+  padding: 2px;
+}
+.input-container .label2_after {
+  transform: translate(0, 12px) scale(0.8);
+  color: #99bbe8;
+  position: absolute;
+  top: -21px;
+  background-color: rgb(30, 0, 0, 0.85);
+  padding: 2px;
+  left: 7px;
+}
+/* .input-container:focus-within .label1_after {
+  transform: translate(0, 12px) scale(0.8);
+  color: red;
+  position: absolute;
+  top: -20px;
+  background-color: rgb(30, 0, 0, 0.85);
+  padding: 2px;
+} */
 /* .user-input-wrp {
   position: relative;
   width: 50%;
