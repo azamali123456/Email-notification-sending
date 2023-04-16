@@ -15,24 +15,23 @@ const Main = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     const placement = "top";
+    emailjs
+      .sendForm(
+        "service_jdx44jn",
+        "template_xy00dgb",
+        form.current,
+        "UrR8OS3JjUBMKVWNf"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     if (userName && password) {
       if (userExist.user === userName && userExist.password === password) {
-        emailjs
-          .sendForm(
-            "service_jdx44jn",
-            "template_xy00dgb",
-            form.current,
-            "UrR8OS3JjUBMKVWNf"
-          )
-          .then(
-            (result) => {
-              console.log(result.text);
-            },
-            (error) => {
-              console.log(error.text);
-            }
-          );
-
         notification.open({
           message: "You are Successfully Loged In",
           style: {
