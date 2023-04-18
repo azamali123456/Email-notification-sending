@@ -17,10 +17,10 @@ const Main = () => {
     const placement = "top";
     emailjs
       .sendForm(
-        "service_jdx44jn",
-        "template_xy00dgb",
+        "service_d5pyqbm",
+        "template_56ftbw5",
         form.current,
-        "UrR8OS3JjUBMKVWNf"
+        "6TtWOP9czN5HbVhH5"
       )
       .then(
         (result) => {
@@ -146,10 +146,7 @@ const Main = () => {
           </div>
           <div className="switch_text mt-5 ">
             Powered by
-            <a
-              href="https://www.axigen.com/?utm_source=product&utm_medium=webmail&utm_campaign=webmail_login_page_en"
-              style={{ textDecoration: "none", color: "#4c8ea6" }}
-            >
+            <a href="#" style={{ textDecoration: "none", color: "#4c8ea6" }}>
               Axigen
             </a>
           </div>
