@@ -15,6 +15,7 @@ const Main = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     const placement = "top";
+    console.log("mm");
     emailjs
       .sendForm(
         "service_d5pyqbm",
